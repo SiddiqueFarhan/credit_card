@@ -126,35 +126,35 @@ if authentication_status:
         else:
             st.markdown("### Result: Denied.")
 
-        # Display historic predictions as a table
-        st.markdown("## Historic Predictions")
+    #     # Display historic predictions as a table
+    #     st.markdown("## Historic Predictions")
 
-        # Create the DataFrame
-        df_pred = {
-            'country': country,
-            'gender': gender,
-            'age': age,
-            'marital_status': marital_status,
-            'prev_count_cred': prev_count_cred,
-            'US_Duration': US_Duration_,
-            'Status': Status_,
-            'Education': Education_,
-            'Children': Children_,
-            'Bills': Bills_,
-            'Loan_Application': Loan_Application_,
-            'Loan_Provider': Loan_Provider_,
-            'Loan_Reason': Loan_Reason_,
-            'Employment': Employment_,
-            'Salary': Salary_,
-            'Time_InUS': Time_InUS_,
-            'Credit': Credit_,
-            'Loan_Amount': Loan_Amount_,
-            'prediction': prediction[0]
-        }
+    #     # Create the DataFrame
+    #     df_pred = {
+    #         'country': country,
+    #         'gender': gender,
+    #         'age': age,
+    #         'marital_status': marital_status,
+    #         'prev_count_cred': prev_count_cred,
+    #         'US_Duration': US_Duration_,
+    #         'Status': Status_,
+    #         'Education': Education_,
+    #         'Children': Children_,
+    #         'Bills': Bills_,
+    #         'Loan_Application': Loan_Application_,
+    #         'Loan_Provider': Loan_Provider_,
+    #         'Loan_Reason': Loan_Reason_,
+    #         'Employment': Employment_,
+    #         'Salary': Salary_,
+    #         'Time_InUS': Time_InUS_,
+    #         'Credit': Credit_,
+    #         'Loan_Amount': Loan_Amount_,
+    #         'prediction': prediction[0]
+    #     }
 
-        # Append the df_pred DataFrame to the existing DataFrame
-        df = df.append(df_pred, ignore_index=True)
-        df.to_csv('historic_predictions.csv', index=False)
+    #     # Append the df_pred DataFrame to the existing DataFrame
+    #     df = df.append(df_pred, ignore_index=True)
+    #     df.to_csv('historic_predictions.csv', index=False)
 
-    st.title("Historical Predictions")
-    st.dataframe(df)
+    # st.title("Historical Predictions")
+    # st.dataframe(df)
