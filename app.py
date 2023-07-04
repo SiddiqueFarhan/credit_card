@@ -156,5 +156,8 @@ if authentication_status:
         df = df.append(df_pred, ignore_index=True)
         df.to_csv('historic_predictions.csv', index=False)
 
-    st.title("Historical Predictions")
-    st.dataframe(df)
+    # Add submit button
+    if st.button("History"):
+
+        st.title("Historical Predictions")
+        st.dataframe(df)
